@@ -3,7 +3,7 @@ node {
 		checkout scm
 
 	stage 'Build'
-		bat 'c:\nuget.exe restore AspNetHelloWorld.sln'
+		bat 'c:\\nuget.exe restore AspNetHelloWorld.sln'
 		bat "\"${tool 'MSBuild'}\" AspNetHelloWorld.sln /p:Configuration=Release /p:Platform=\"Any CPU\""
 
 	stage 'Archive'
